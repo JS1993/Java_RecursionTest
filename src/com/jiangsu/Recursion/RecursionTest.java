@@ -48,9 +48,34 @@ public class RecursionTest {
 	
 	/**
 	 * 方式二：使用递归实现
+	 * 分析：5 10 15 20 25 30 35 40 45 50 55 60 65 70 75 80 85 90 95 100 
+	 * 1000/5 = 200
+	 * 200/5 = 40
+	 * 40/5 = 8
+	 * 8/5 = 1
+	 * 共：200+40+8+1=249个0
 	 */
-	public static void method2(){
-		
+	public static int method2(int num){
+		if(num>0&&num<5){
+			return 0 ;
+		}else{
+			return num/5+method2(num/5);
+		}
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 }
